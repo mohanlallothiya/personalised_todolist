@@ -17,8 +17,8 @@
 - can create multiple custom list by passing title in URL
 
 - for creating and accessing custom list
-  -add "/<title>" in the URL
-  -example: for Work list https://todolist-mohan.onrender.com/Work
+   - add "/<title>" in the URL
+   - example: for Work list https://todolist-mohan.onrender.com/Work
 - custom todolist can be access from navbar on clicking custom todolist title
 
 - todolist project is live at below web address
