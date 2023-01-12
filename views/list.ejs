@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+    <div class="box headingCon">
+        <h1 class="titleHeading"><%= title %></h1>
+    </div>
+    <div class="box listboxCon">
+        <div class="listbox">
+        <% newListItems.forEach((eachitem)=>{%>
+            <form class="checkboxCon" action="/delete" method="post">
+            <div class="item">
+                <button class="deleteBtn" type="submit"><i class="fa fa-trash-o deleteIcon" aria-hidden="true"></i></button>
+                <p class="todoItemText"><%=eachitem.name%></p>
+                <input type="hidden" name="listname" value="<%=title %>" ></input>
+                <input type="hidden" name="checkbox" value="<%= eachitem._id%>" ></input>
+            </div>
+            </form>
+        <%});%>
+        </div>
+        <div class="addtodoCon">
+        <form class="item" action="/" method="post">
+            <input class="todoInput" type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button class="addButton" type="submit" name="list" value="<%= title %>">+</button>
+        </form>
+        </div>
+    </div>
+<%- include('partials/footer') -%>

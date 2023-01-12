@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+
+<div class="signupmainCon">
+
+<div class="box headingCon signupheadingCon">
+    <h1 class="titleHeading signupheading">Sign In</h1>
+</div>
+
+<div class="box signupCon">
+    <form action="/signin" method="post">
+            <div class="signinCon">
+                <div class="usernameCon">
+                <label for="userName">Username</label>
+                <input id="userName" class="userInputsignin" type="text" name="username" placeholder="username"/>
+                </div>
+                <div class="usernameCon">
+                <label for="passWord">Password</label>
+                <input id="passWord" class="userInputsignin" type="password" name="password" placeholder="password"/>
+                </div>
+                <p class="errormsg"><%=errorMsg%></p>
+                <button class="btn signinBtn" type="submit">Sign In</button>
+            </div>  
+    </form>
+</div>
+</div>
+<%- include('partials/footer') -%>

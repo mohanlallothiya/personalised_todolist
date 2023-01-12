@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" href="images/logoimage1.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0ec1eca55e.js" crossorigin="anonymous"></script>
+    
+    <title>Todo List</title>
+    <nav class="navbar">
+        <a class="homelink" href="<%=customlistArray[0].address%>"><%=customlistArray[0].title%></a>
+        <div class="usersigninCon">
+            <div class="userImageCon">
+                <p class="usernameText"><%=username%></p>
+                <img id="userBtn" class="userImage" src="https://img.icons8.com/ios-glyphs/30/null/user--v1.png"/>
+            </div>
+            <div id="hiddenDiv" class="navsignup navhidden">
+                <% if(username==="guestuser"){ %>
+                    <a class="navlink" href="/signup">Sign Up</a>
+                    <a class="usersignin" href="/signin"><button class="signoutBtn">Sign In</button></a>
+                <%}else{%>
+                    <form action="/signout" method="post">
+                        <button class="signoutBtn" type="submit">Sign Out</button>
+                    </form>
+                <%}%>  
+           </div>
+        </div>
+    </nav>
+    <div class="customtodolinkcon">
+        <% for(let i=1; i < customlistArray.length;i++){%>
+            <a class="customtodolink" href="<%=customlistArray[i].address%>"><%=customlistArray[i].title%></a>
+        <%};%>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#userBtn").mouseover(function(){
+                $("#hiddenDiv").removeClass("navhidden");
+            })
+            $("#userBtn").click(function(){
+                $("#hiddenDiv").toggle();
+            })
+        });
+    </script>
+</head>
+<body>

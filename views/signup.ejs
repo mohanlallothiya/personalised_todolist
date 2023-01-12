@@ -1,0 +1,37 @@
+<%- include('partials/header') -%>
+
+<div class="signupmainCon">
+<div class="box headingCon signupheadingCon">
+    <h1 class="titleHeading signupheading">Sign Up</h1>
+</div>
+
+<div class="box signupCon">
+    <form action="/signup" method="post">
+        <div class="signupform">
+            <div class="nameCon">
+                <div>
+                <label for="firstName">First Name</label>
+                <input id="firstName" class="userInput" type="text" name="fname" placeholder="first name"/>
+                </div>
+                <div>
+                <label for="lastName">Last Name</label>
+                <input id="lastName" class="userInput" type="text" name="lname" placeholder="last name"/>
+                </div>
+            </div>
+            <div class="nameCon">
+                <div>
+                <label for="userName">Username</label>
+                <input id="userName" class="userInput" type="text" name="username" placeholder="username"/>
+                </div>
+                <div>
+                <label for="passWord">Password</label>
+                <input id="passWord" class="userInput" type="password" name="password" placeholder="password"/>
+                </div>
+            </div>
+        <p class="errormsg"><%=errorMsg%></p>
+        <button class="btn signupBtn" type="submit">Sign Up</button>
+    </div>
+    </form>
+</div>
+</div>
+<%- include('partials/footer') -%>
