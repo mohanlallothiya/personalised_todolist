@@ -12,7 +12,7 @@
 
 - new item can be added to list by clicking +
 
-- checkbox is used for deleting the item from todoList
+- delete icon is used for deleting the item from todoList
 
 - can create multiple custom list by passing title in URL
 
